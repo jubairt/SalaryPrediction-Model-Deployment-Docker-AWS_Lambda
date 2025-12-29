@@ -188,6 +188,7 @@ Re-tag and push the image again.
 
 ### 📸 Amazon ECR Screenshot
 
+![Amazon ECR](Images/ECR_Image_Screenshot.png)
 This confirms:
 - Image is stored in ECR
 - Correct architecture (amd64)
@@ -207,6 +208,7 @@ Timeout: 10 seconds
 
 ### 📸 AWS Lambda Screenshot
 
+![AWS Lambda](Images/Lambda_Function_Screenshot.png)
 - This confirms:
 - Lambda is using container image
 - Function is active
@@ -250,18 +252,20 @@ Expected response:
 
 ### 📸 API Gateway Screenshot
 
+![API Gateway](Images/API_Gateway_Screenshot.png)
 This confirms:
 - API Gateway is connected to Lambda
 - /predict route is active
 - Public endpoint is available
 
 ### 🔗 Test Live API (PowerShell)
+```powershell
 Invoke-RestMethod `
   -Uri https://xxxxxxxx.execute-api.us-east-1.amazonaws.com/predict `
   -Method POST `
   -ContentType "application/json" `
   -Body '{"years_experience": 3.5}'
-
+```
 
 Expected response:
 ```powershell
@@ -282,11 +286,11 @@ Expected response:
 
 🏁 Final Outcome
 
-✔ End-to-end ML deployment
-✔ Fully serverless architecture
-✔ No server management
-✔ Auto-scaling inference API
-✔ Production-ready AWS solution
+- ✔ End-to-end ML deployment
+- ✔ Fully serverless architecture
+- ✔ No server management
+- ✔ Auto-scaling inference API
+- ✔ Production-ready AWS solution
 
 This project demonstrates real-world ML deployment on AWS using Lambda container images.
 
