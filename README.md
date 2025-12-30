@@ -135,7 +135,7 @@ Login Succeeded
 
 ### 🏷 Tag Docker Image
 ```powershell
-docker tag salary-lambda:latest \
+docker tag salary-lambda:latest `
 <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/salary-lambda:latest
 ```
 
