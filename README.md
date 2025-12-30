@@ -70,8 +70,11 @@ docker run -p 9000:8080 salary-lambda
 ### Invoke the Lambda Runtime API:
 
 ```powershell
-curl -X POST "http://localhost:9000/2015-03-31/functions/function/invocations" \
--d '{"years_experience": 3}'
+Invoke-RestMethod `
+  -Uri http://localhost:9000/2015-03-31/functions/function/invocations `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"years_experience": 3}'
 ```
 
 Expected response:
